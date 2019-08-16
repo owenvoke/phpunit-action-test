@@ -1,0 +1,12 @@
+on: push
+name: Push
+jobs:
+  phpUnitTest:
+    name: PHPUnit Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: PHPUnit Test
+      uses: pxgamer/phpunit-action@v0.1.0
+      with:
+        args: tests
